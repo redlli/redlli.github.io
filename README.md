@@ -1,2 +1,26 @@
-# redlli.github.io
-Hoe Page for Redlli 
+# redlli
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redllis Wounderland</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Redllis Wounderland</h1>
+    <p>Redlli is incredibly creative and great!</p>
+</body>
+</html>
+
