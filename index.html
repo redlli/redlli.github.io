@@ -3,24 +3,49 @@
 <head>
     <title>Redlli</title>
     <style>
+        @font-face {
+            font-family: 'Bionic Kid';
+            src: url('BionicKid.woff2') format('woff2'),
+                 url('BionicKid.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             background-color: black;
             color: white;
-            font-family: brandford;
+            font-family: 'Bionic Kid', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,53,53,1) 50%, rgba(0,0,0,1) 100%);
+            animation: gradient 3s ease infinite;
         }
         h1 {
             text-align: center;
+            animation: fadeIn 2s;
         }
         p {
             text-align: center;
             font-size: 20px;
+            animation: fadeIn 2s;
         }
-      
+        @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        @keyframes gradient {
+            0% {background-position: 0%;}
+            100% {background-position: 100%;}
+        }
     </style>
 </head>
 <body>
     <h1>Redllis Wounderland</h1>
     <p>Redlli is a fervent advocate for open-source software, likening it to a dance where everyone is invited to participate freely and joyfully. Redlli envisions a world where software serves as a catalyst for ease and efficiency in human life. The aspiration is to craft exquisite software and codes that seamlessly integrate into daily routines, making life not just easier, but also more enjoyable. Redlli’s projects are not merely about creating software; they are about bringing a slice of heaven down to earth, transforming the mundane into the extraordinary through the power of code.</p>
-    
 </body>
 </html>
