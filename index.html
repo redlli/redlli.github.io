@@ -11,14 +11,15 @@
             padding: 0;
         }
         header {
-            
-            font-size:30px;
-            background-color: Black;
+            font-size: 30px;
+            background-color: black;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            //position:fixed;
-            
+            position: fixed;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
         nav ul {
             list-style-type: none;
@@ -33,7 +34,6 @@
             text-decoration: none;
         }
         #Back {
-        	
             padding: 10px;
             margin: auto;
             background-color: black;
@@ -41,11 +41,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            
         }
-        
-       	   #logos {
+        #Back img {
+            width: 100%;
+            height: auto;
+        }
+        #logos {
             display: flex;
             overflow: hidden;
             width: 100%;
@@ -71,20 +72,18 @@
             padding: 10px 0;
             font-size: 30px;
         }
-        
-        p{
-        	font-size:30px;
-        	background-color: #050505;
-        	color: #fff;
-                padding: 10px 0;
-                text-align: center;
+        p {
+            font-size: 30px;
+            background-color: #050505;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
         }
         footer {
             background-color: #050505;
             color: #fff;
             text-align: center;
             padding: 5px 0;
-            //position: fixed;
             width: 100%;
             bottom: 0;
         }
@@ -102,27 +101,26 @@
     </header>
 
     <section id="Back">
-        <img src="Img/Back.png">
+        <img src="Img/Back.png" alt="Background Image">
     </section>
 
     <section id="logos">
- 	<img src="Img/3Dmaker.png" alt="The 3D Maker Logo">
+        <img src="Img/3Dmaker.png" alt="The 3D Maker Logo">
         <img src="Img/KID.png" alt="Hand Drawn Face Logo">
         <img src="Img/JA_logo.png" alt="JA Letters Logo">
-         <img src="Img/Animar.png" alt="Animar Logo">
+        <img src="Img/Animar.png" alt="Animar Logo">
     </section>
     <section class="description">
-    	   Redlli is a fervent advocate for open-source software, likening it to a dance where everyone is invited to participate freely and joyfully. Redlli envisions a world where software serves as a catalyst for ease and efficiency in human life. The aspiration is to craft exquisite software and codes that seamlessly integrate into daily routines, making life not just easier, but also more enjoyable. Redlli’s projects are not merely about creating software, they are about bringing a slice of heaven down to earth, transforming the mundane into the extraordinary through the power of code.
+        Redlli is a fervent advocate for open-source software, likening it to a dance where everyone is invited to participate freely and joyfully. Redlli envisions a world where software serves as a catalyst for ease and efficiency in human life. The aspiration is to craft exquisite software and codes that seamlessly integrate into daily routines, making life not just easier, but also more enjoyable. Redlli’s projects are not merely about creating software, they are about bringing a slice of heaven down to earth, transforming the mundane into the extraordinary through the power of code.
     </section>
- 
 
     <footer>
-    	<audio controls loop >
-		<source  src="BGM.wav" >
-		Your browser does not support the audio element.
-	</audio>
-        <p style="font-size: 20px";>--- A Redllis Project ---</p>
-	<p style="font-size: 15px";>©2024</p>
+        <audio controls loop>
+            <source src="BGM.wav">
+            Your browser does not support the audio element.
+        </audio>
+        <p style="font-size: 20px;">--- A Redlli Project ---</p>
+        <p style="font-size: 15px;">©2024</p>
     </footer>
 </body>
 </html>
