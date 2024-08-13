@@ -8,9 +8,11 @@
         body {
             font-family: Arial, sans-serif;
             background-color: black;
-            margin: 0;
+            margin: 1px;
             padding: 0;
-            padding-top: 60px; /* Adjust this value based on the height of your header */
+            padding-top: 75px; /* Adjust this value based on the height of your header */
+            background-color:#020202;
+            
         }
         header {
             font-size: 30px;
@@ -36,16 +38,15 @@
             text-decoration: none;
         }
         #Back {
-            padding: 10px;
+            padding: 1px;
             margin: auto;
-            background-color: black;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
         p {
-            background-color: #050505;
+            //background-color: #050505;
             color: #fff;
             padding: 10px 0;
             text-align: center;
@@ -54,7 +55,7 @@
             background-color: #050505;
             color: #fff;
             text-align: center;
-            padding: 5px 0;
+            padding: 0px 0;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -82,16 +83,31 @@
         </nav>
     </header>
     <section id="Back">
-        <p style="font-size: 30px; background-color: black;">Hello! I like to create, I want to create everything I like from A to Z. Simply put, I want to be the god of creation and learning. I hope you like my creation.</p>
+        <p style="font-size: 30px">Hello! I like to create, I want to create everything A to Z. Simply put, I want to be the god of creation and learning. I hope you like my creation.</p>
     </section>
-    <footer>
-        <audio controls loop>
-            <source src="BGM.wav">
-            Your browser does not support the audio element.
-        </audio>
+    <footer style="background-color: #050505;">
+       <audio id="bgm" loop>
+       <source src="BGM.wav">
+    	Your browser does not support the audio element.
+       </audio>
+
+
         <p style="font-size: 20px;">--- A Redlli Project ---</p>
         <p style="font-size: 15px;">©2024</p>
     </footer>
+     <script>
+        document.addEventListener('click', function() {
+            var audioElement = document.getElementById('bgm');
+            audioElement.play();
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                var audioElement = document.getElementById('bgm');
+                audioElement.pause();
+            }
+        });
+    </script>
 </body>
 </html>
 
