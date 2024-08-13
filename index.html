@@ -1,48 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Redlli</title>
     <style>
-        
         body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        header {
             
-            background-image: url("BG.png");
-            background-color:black;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
-            font-family: 'Bionic Kid', sans-serif;
+            font-size:30px;
+            background-color: Black;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            //position:fixed;
+            
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        #Back {
+        	
+            padding: 10px;
+            margin: auto;
+            background-color: black;
+            width: 100%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            position: relative;
-        }
-        h1 {
-            text-align: center;
-          
+            
             
         }
-        p {
-            text-align: center;
-            font-size: 20px;
-            
         
+       	  #logos {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
         }
-      
+        #logos img {
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            background-color: black;
+            animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .description {
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 30px;
+        }
+        p{
+        	font-size:30px;
+        	background-color: #050505;
+        	color: #fff;
+                padding: 10px 0;
+                text-align: center;
+        }
+        footer {
+            background-color: #050505;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            //position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
     </style>
 </head>
-	<body>
-	    <h1>Redllis Wounderland</h1>
-	    <p>Redlli is a fervent advocate for open-source software, likening it to a dance where everyone is invited to participate freely and joyfully. Redlli envisions a world where software serves as a catalyst for ease and efficiency in human life. The aspiration is to craft exquisite software and codes that seamlessly integrate into daily routines, making life not just easier, but also more enjoyable. Redlli’s projects are not merely about creating software; they are about bringing a slice of heaven down to earth, transforming the mundane into the extraordinary through the power of code.</p>
-	    <audio controls>
-		<source src="BGM.wav" autoplay loop>
-		Your browser does not support the audio element.
-	    </audio>
-	</body>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Random">Random</a></li>
+                <li><a href="#About">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section id="Back">
+        <img src="Img/Back.png">
+    </section>
+
+    <section id="logos">
+        <img src="Img/KID.png" alt="Hand Drawn Face Logo">
+        <img src="Img/JA_logo.png" alt="Mirrored Letters Logo">
+        <img src="Img/3Dmaker.png" alt="The 3D Maker Logo">
+    </section>
+    <section style="color:white; text-align: center;padding: 10px 0;font-size: 30px">
+    	   Redlli is a fervent advocate for open-source software, likening it to a dance where everyone is invited to participate freely and joyfully. Redlli envisions a world where software serves as a catalyst for ease and efficiency in human life. The aspiration is to craft exquisite software and codes that seamlessly integrate into daily routines, making life not just easier, but also more enjoyable. Redlli’s projects are not merely about creating software; they are about bringing a slice of heaven down to earth, transforming the mundane into the extraordinary through the power of code.
+    </section>
+ 
+
+    <footer>
+    	<audio controls loop >
+		<source  src="BGM.wav" >
+		Your browser does not support the audio element.
+	</audio>
+        <p style="font-size: 20px";>--- A Redllis Project ---</p>
+	<p style="font-size: 15px";>©2024</p>
+    </footer>
+</body>
 </html>
+
