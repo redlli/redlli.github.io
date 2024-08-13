@@ -117,13 +117,26 @@
     </section>
 
     <footer>
-        <audio controls loop>
-            <source src="BGM.wav">
-            Your browser does not support the audio element.
-        </audio>
+         <audio id="bgm" loop>
+       <source src="BGM.wav">
+    	Your browser does not support the audio element.
+       </audio>
         <p style="font-size: 20px;">--- A Redlli Project ---</p>
         <p style="font-size: 15px;">©2024</p>
     </footer>
+     <script>
+        document.addEventListener('click', function() {
+            var audioElement = document.getElementById('bgm');
+            audioElement.play();
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.code === 'Space') {
+                var audioElement = document.getElementById('bgm');
+                audioElement.pause();
+            }
+        });
+    </script>
 </body>
 </html>
 
