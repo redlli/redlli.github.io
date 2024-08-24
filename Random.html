@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random URL Redirect</title>
+    <script>
+        function redirectToRandomURL() {
+            var urls = [
+                'https://youtu.be/7JbBSPceH4U',
+                'https://www.example2.com',
+                'https://www.example3.com'
+            ];
+            var randomIndex = Math.floor(Math.random() * urls.length);
+            window.location.href = urls[randomIndex];
+        }
+    </script>
+</head>
+<body onload="redirectToRandomURL()">
+    <h1>Redirecting to a random URL...</h1>
+</body>
+</html>
+
