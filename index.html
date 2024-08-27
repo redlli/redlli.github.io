@@ -8,8 +8,8 @@
         body {
             font-family: Arial, sans-serif;
             background-color: black;
-            margin: 0;
-            padding: 0;
+            width: 100%;
+            
         }
         header {
             font-size: 30px;
@@ -35,7 +35,7 @@
             text-decoration: none;
         }
         #Back {
-            padding: 10px;
+            
             margin: auto;
             background-color: black;
             width: 100%;
@@ -45,7 +45,7 @@
             padding-top: 60px; /* Adjust this value based on the height of your header */
         }
         #Back img {
-            width: 100%;
+            width: 95%;
             height: auto;
         }
         #logos {
@@ -60,7 +60,7 @@
             padding: 10px;
             width: 250px;
             height: 250px;
-            margin: 10px;
+            
             background-color: black;
             animation: scroll 5s linear infinite;
         }
@@ -71,25 +71,29 @@
         .description {
             color: white;
             text-align: center;
-            padding: 10px 0;
             font-size: 30px;
             margin:10px;
         }
         p {
             font-size: 30px;
-            background-color: #050505;
             color: #fff;
-            padding: 10px 0;
             text-align: center;
+            bottom:0;
+            
             
         }
-        footer {
+       footer {
             background-color: #050505;
             color: #fff;
             text-align: center;
-            padding: 5px 0;
             width: 100%;
             bottom: 0;
+            
+        }
+        a{
+        	color:white;
+        	text-decoration: none;
+        
         }
     </style>
 </head>
@@ -120,13 +124,14 @@
     </section>
 
     <footer>
-         <audio id="bgm" loop>
-       <source src="BGM.wav">
-    	Your browser does not support the audio element.
-       </audio>
         <p style="font-size: 20px;">--- A Redlli Project ---</p>
+        <a href="support.html">Support Me</a>
         <p style="font-size: 15px;">©2024</p>
+        <audio id="bgm" loop>
+     	<source src="BGM.wav">Your browser does not support the audio element.
+     </audio>
     </footer>
+     
      <script>
         document.addEventListener('click', function() {
             var audioElement = document.getElementById('bgm');
