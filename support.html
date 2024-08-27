@@ -10,101 +10,65 @@
             margin: 1px;
             padding: 0;
             padding-top: 75px; /* Adjust this value based on the height of your header */
-            background-image: url('Img/supback.jpg');
             background-color: black;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    background-attachment: fixed;
         }
+        
         header {
             font-size: 30px;
             background-color: black;
-            color: #fff;
+            color: white;
             padding: 10px 0;
             text-align: center;
             position: fixed;
             width: 100%;
             top: 0;
-            z-index: 1000;
         }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
+      
+        a{
+        	color:white;
+        	text-decoration: none;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-        #Back {
-            padding: 1px;
-            margin: auto;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        p {
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+      
         footer {
             background-color: #050505;
             color: #fff;
             text-align: center;
-            padding: 0px 0;
             width: 100%;
             bottom: 0;
-            position:fixed;
+            
         }
-        @media (min-width: 600px) {
-            p {
-                font-size: 25px;
-            }
+        #upi{
+            display: block; 
+            justify-content: center; 
+            color:white; 
+            text-align:center;
+            font-family: 'Fira Code', medium;
         }
-        @media (min-width: 768px) {
-            p {
-                font-size: 30px;
-            }
-        }
+        
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Random.html">Random</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="support.html">Supporters</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="Random.html">Random</a>
+            <a href="About.html">About</a>
         </nav>
     </header>
            
-    <section id="Back">
-         <p style="font-size: 30px">"Support us by giving you money"</p>
-         <img style="width:20%; display: block; margin: 0 auto;" src="Img/UPI.jpg" alt="UPIQR">
-         <ul style="color: #fff; text-align: center; list-style-type: none; padding: 0;">
-         <p>Top Suppoters</p>
-             <li>-------------</li>
-             <li>-------------</li>
-             <li>can be you</li>
-         </ul>
+    <section  id="upi">
+         <p style="font-size: 30px">"Support me by giving me your money"</p>
+         	<img style="width: 40%;" src="Img/Support/UPI.png" alt="UPiQR">
     </section>
-   
-    <footer style="background-color: #050505;">
-       <audio id="bgm" loop>
-       <source src="BGM.wav">
-    	Your browser does not support the audio element.
-       </audio>
-        <p style="font-size: 20px;">--- A Redlli Project ---</p>
-        <p style="font-size: 15px;">©2024</p>
-    </footer>
-     <script>
+	    <footer>
+	       <audio id="bgm" loop>
+	       <source src="BGM.wav">
+	    	Your browser does not support the audio element.
+	       </audio>
+		<p style="font-size: 20px;">--- A Redlli Project ---</p>
+		<p style="font-size: 15px;">©2024</p>
+	    </footer>
+    <script>
         document.addEventListener('click', function() {
             var audioElement = document.getElementById('bgm');
             audioElement.play();
