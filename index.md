@@ -5,7 +5,7 @@ title: Redlii
 
 
 <section id="Back">
-    <img src="{{ '/assets/img/Back.png' | relative_url }}" alt="Background Image">
+    <img src="/assets/img/Back.png" alt="Background Image">
 </section>
 
 <section class="intro">
@@ -14,17 +14,17 @@ title: Redlii
     
 <section id="logos">
     <div class="logo-container">
-        <a href="{{ '/3Dmaker' | relative_url }}">
-            <img src="{{ '/assets/img/3Dmaker.png' | relative_url }}" alt="The 3D Maker Logo">
+        <a href="/3Dmaker">
+            <img src="/assets/img/3Dmaker.png" alt="The 3D Maker Logo">
         </a>
         <a href="https://tkid.redlii.com/">
-            <img src="{{ '/assets/img/KID.png' | relative_url }}" alt="KID Logo">
+            <img src="/assets/img/KID.png" alt="KID Logo">
         </a>
         <a href="https://ja.redlii.com">
-            <img src="{{ '/assets/img/JA_logo.png' | relative_url }}" alt="JA Logo">
+            <img src="/assets/img/JA_logo.png" alt="JA Logo">
         </a>
-        <a href="{{ '/Animar' | relative_url }}">
-            <img src="{{ '/assets/img/Animar.png' | relative_url }}" alt="Animar Logo">
+        <a href="/Animar">
+            <img src="/assets/img/Animar.png" alt="Animar Logo">
         </a>
     </div>
 </section>

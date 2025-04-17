@@ -2,7 +2,7 @@
 title: Support
 layout: default
 permalink: /support
-icon: /assets/img/icons/JA_logo.png
+icon: /assets/img/logo.png
 description: Support us page
 keywords: Support, Support us
 ---

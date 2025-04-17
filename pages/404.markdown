@@ -2,7 +2,7 @@
 title: 404 | Page not found
 permalink: /404
 layout: default
-icon: /assets/img/icons/JA_logo.png
+icon: /assets/img/logo.png
 description: Page not found or broken URL
 keywords: JA, JA by redlii, JA 404 page, app, JA apps, JA games
 ---
