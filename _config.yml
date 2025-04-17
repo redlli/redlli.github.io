@@ -11,8 +11,8 @@ seo:
   title: "Redlii"
   description: "Welcome to Wounderland"
   keywords: "redlii, the3dmaker, TKiD, Animar, JA by redlii"
-  image: "/assets/images/cover.jpg"
-  icon: "/assets/Img/logo.png"
+  image: "/assets/img/logo.jpg"
+  icon: "/assets/img/logo.png"
   
 plugins:
   - jekyll-feed
