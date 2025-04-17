@@ -2,7 +2,7 @@
 title: About
 layout: default
 permalink: /about
-icon: /assets/img/icons/JA_logo.png
+icon: /assets/img/logo.png
 description: About redlii and JA
 keywords: Redlii, who is redlii, what is redlii
 ---
