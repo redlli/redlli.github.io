@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="icon" href="{{ '/assets/img/logo.png' | relative_url }}" type="image/x-icon">
+    {% seo %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ '/' | relative_url }}">Home</a></li>
+                <li><a href="{{ '/Random' | relative_url }}">Random</a></li>
+                <li><a href="{{ '/About' | relative_url }}">About</a></li>
+                <li><a href="https://blog.redlii.com">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        {{ content }}
+    </main>
+
+    <footer>
+        <p style="font-size: 20px;">--- A Redlli Project ---</p>
+        <a href="{{ '/support' | relative_url }}">Support Me</a>
+        <p style="font-size: 15px;">©2025</p>
+        <audio id="bgm" loop>
+            <source src="{{ '/assets/audio/BGM.wav' | relative_url }}">
+            Your browser does not support the audio element.
+        </audio>
+    </footer>
+
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+</html>
+
