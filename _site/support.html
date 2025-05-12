@@ -5,37 +5,125 @@
     <title>Support</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" href="/assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Support | Redlii</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Support" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Support Us Page" />
+<meta property="og:description" content="Support Us Page" />
+<link rel="canonical" href="http://localhost:4000/support" />
+<meta property="og:url" content="http://localhost:4000/support" />
+<meta property="og:site_name" content="Redlii" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Support" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Support Us Page","headline":"Support","url":"http://localhost:4000/support"}</script>
+<!-- End Jekyll SEO tag -->
+
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <div class="hamburger-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="main-nav"> <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/Random">Random</a></li>
-                <li><a href="/About">About</a></li>
+                <li><a href="/random">Random</a></li>
+                <li><a href="/about">About</a></li>
                 <li><a href="https://blog.redlii.com">Blog</a></li>
             </ul>
         </nav>
+
+        <nav class="mobile-nav-menu">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/random">Random</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="https://blog.redlii.com">Blog</a></li>
+            </ul>
+        </nav>
+
     </header>
-    <section class="content">
+
+    <main class="content">
         <style>
-footer {
-    position: fixed;
-    bottom: 0;
-}
+    /* Centering Container */
+    #support-container {
+        background: #f9f9f9;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    /* QR Code Styling */
+    #support-container img {
+        width: 280px;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 20px;
+    }
+
+    #support-container img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Support Box */
+    .support-button {
+        width: 240px;
+        padding: 15px;
+        background: #ffcc00;
+        color: #333;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .support-button:hover {
+        background: #ffb300;
+        transform: translateY(-4px);
+    }
+    
 </style>
 
-<section id="upi">
-         <p style="font-size: 30px">"Support me by giving me your money"</p>
-         <img style="width: 350px;" src="/assets/img/Support/UPI.png" alt="UPiQR" />
-    </section>
+<section id="support-container">
+    <h2 style="color: #444;">Support me by giving me your money</h2>
+   
+
+    <a href="https://buymeacoffee.com/redlii">
+        <img src="/assets/img/bmc_qr.png" alt="Support QR Code" />
+    </a>
+
+    <div class="support-button" onclick="window.location.href='https://buymeacoffee.com/redlii';">
+        Support Me
+    </div>
+</section>
 
 
-    </section>
+    </main>
 
     <footer>
+        <div class="footer-links">
+            <a class="linkhai" href="/support">Support Me</a>
+            <a class="linkhai" href="/readme">readme</a>
+            <a class="linkhai" href="/credits">credits</a>
+            <a class="linkhai" href="/contactus">Contact Us</a>
+        </div>
         <p style="font-size: 20px;">--- A Redlli Project ---</p>
-        <a href="/support">Support Me</a>
         <p style="font-size: 15px;">©2025</p>
         <audio id="bgm" loop>
             <source src="/assets/audio/BGM.wav">
@@ -43,7 +131,5 @@ footer {
         </audio>
     </footer>
 
-    <script src="/assets/js/script.js"></script>
-</body>
+    <script src="/assets/js/script.js"></script> </body>
 </html>
-

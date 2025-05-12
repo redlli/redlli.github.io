@@ -1,46 +1,36 @@
-
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: black;
-    color: white;
+    background-color: black; /* Core theme background */
+    color: white; /* Core theme text color */
     margin: 0;
     padding: 0;
+    /* We will add padding-top in the media query for mobile */
+    overflow-x: hidden; /* Prevent horizontal scroll when mobile menu is open */
 }
-
 header {
     font-size: 24px;
     background-color: black;
     color: white;
-    padding: 1%;
+    padding: 2%;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
-.content{
-    text-align: center;
-     color: white;
-     background-color: black;
-     margin-top: 7%;
-}
-.intro {
-    padding: 60px 20px;
-    text-align: center;
-    font-size: 30px;
-    max-width: 75%;
-    margin: auto;
-}
 
+/* Original Navigation Styles (Desktop) */
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    margin: 0;
+    /* Removed display: flex from desktop nav ul */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline; /* Original display */
+    margin: 0 20px; /* Original margin */
 }
 
 nav ul li a {
@@ -49,19 +39,73 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Hamburger Icon Styles (Hidden by default on Desktop) */
+.hamburger-icon {
+    display: none; /* Hidden by default on desktop */
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    z-index: 1100;
+    position: absolute; /* Position it absolutely within the fixed header */
+    top: 50%; /* Center vertically */
+    left: 20px; /* Position from the left */
+    padding: 1%;
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
 
+/* Mobile Navigation Menu Styles (Hidden by default on Desktop) */
+.mobile-nav-menu {
+    display: none; /* Hidden by default on desktop */
+}
+
+/* Link Styling */
+.linkhai {
+    color: blue;
+    text-decoration: none; /* Ensure links are not underlined by default */
+    transition: color 0.3s ease, font-size 0.3s ease; /* Add transition for smoother hover */
+}
+
+.linkhai:hover {
+    color: orange;
+    font-size: 30px; /* This might cause layout shifts, consider a different hover effect */
+}
+
+/* Content Area */
+.content {
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin-top: 7%; /* Original margin-top */
+    padding: 1%;
+    box-sizing: border-box;
+    width: 100%; /* Default width */
+    max-width: 1200px; /* Max width for larger screens */
+    margin-left: auto; /* Center content */
+    margin-right: auto; /* Center content */
+    min-height: 80vh; /* Ensure content area is at least 80vh */
+}
+
+/* Intro Section */
+.intro {
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 30px;
+    max-width: 75%;
+    margin: auto;
+    color: white; /* Ensure intro text is white on black background */
+}
+
+/* Back Section (Assuming this is a specific content block) */
 #Back {
     margin: auto;
     width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 0px; /* Adjusted to fit header */
+    padding-top: 0px;
 }
 
-
-
-/* Logo Section */
+/* Logo Section (Scrolling Logos) */
 #logos {
     display: flex;
     align-items: center;
@@ -69,13 +113,15 @@ nav ul li a {
     overflow: hidden;
     width: 100%;
     background-color: black;
-    padding: 20px;
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 .logo-container {
     display: flex;
     gap: 20px;
     animation: scroll 8s linear infinite;
+    white-space: nowrap;
 }
 
 #logos a {
@@ -97,13 +143,174 @@ nav ul li a {
     100% { transform: translateX(-100%); }
 }
 
- 
+
+/* Footer */
 footer {
     background-color: #111;
     color: white;
     text-align: center;
     padding: 2%;
     width: 100%;
-    position: relative;
-    bottom: 0;
+    box-sizing: border-box;
+    margin-top: auto; /* Push footer to the bottom if content is short */
+}
+
+.footer-links {
+    /* Styles for footer links wrapper if needed */
+    margin-bottom: 10px; /* Space below links and before text */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust padding-top on body to make space for the fixed header on mobile */
+    body {
+        padding-top: 60px; /* Assuming a fixed header height of 60px on mobile */
+    }
+
+    header {
+        height: 60px; /* Set a fixed height for the header on mobile */
+        padding: 0 10px; /* Adjusted padding */
+         display: flex; /* Use flexbox to position logo and hamburger */
+         align-items: center;
+         justify-content: space-between; /* Space out items */
+    }
+
+    .site-title-logo {
+        /* Adjust logo/title size on mobile if needed */
+         font-size: 1em;
+    }
+
+    .site-title-logo img.site-logo {
+         height: 40px; /* Adjust logo height on mobile */
+    }
+
+
+    /* Show hamburger icon on mobile */
+    .hamburger-icon {
+        display: block;
+        position: static; /* Remove absolute positioning on mobile header flex item */
+        transform: none; /* Reset transform */
+        order: -1; /* Place it on the left */
+    }
+
+    /* Hide desktop navigation on mobile */
+    .main-nav {
+        display: none;
+    }
+
+    /* Mobile Navigation Menu Styles (Initial State - Hidden) */
+    .mobile-nav-menu {
+        display: flex; /* Show the mobile menu container */
+        position: fixed;
+        top: 60px; /* Position below the header */
+        left: -250px; /* Start off-screen to the left */
+        width: 250px; /* Set the width of the mobile menu */
+        height: calc(100vh - 60px); /* Full height minus header */
+        background-color: #222; /* Dark background for the mobile menu */
+        flex-direction: column;
+        padding-top: 20px;
+        transition: left 0.3s ease; /* Smooth slide-in transition */
+        z-index: 999; /* Below hamburger, above content */
+        overflow-y: auto; /* Add scrolling if menu content overflows */
+    }
+
+    .mobile-nav-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile-nav-menu ul li {
+        margin: 0;
+        border-bottom: 1px solid #333; /* Separator between menu items */
+    }
+
+    .mobile-nav-menu ul li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-nav-menu ul li a {
+        display: block; /* Make the whole list item clickable */
+        color: #eee; /* Light text color */
+        text-decoration: none;
+        padding: 15px 20px;
+        font-weight: normal;
+        transition: background-color 0.3s ease;
+    }
+
+    .mobile-nav-menu ul li a:hover {
+        background-color: #333; /* Darker background on hover */
+        color: white;
+    }
+
+    /* Class to slide in the mobile menu */
+    body.mobile-menu-open .mobile-nav-menu {
+        left: 0; /* Slide into view */
+    }
+
+    /* Optional: Overlay for main content when menu is open */
+     body.mobile-menu-open .content::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+        z-index: 998; /* Below the menu, above the content */
+        pointer-events: auto; /* Allow clicking on the overlay to close */
+    }
+
+
+    /* Adjust content margins/padding for mobile */
+    .content {
+        margin-top: 60px; /* Ensure it starts below the fixed header */
+        padding: 15px; /* Adjusted padding */
+        margin-left: auto; /* Center content */
+        margin-right: auto; /* Center content */
+    }
+
+    .intro {
+        font-size: 1.2em; /* Smaller font size on mobile */
+        padding: 20px 10px; /* Adjusted padding */
+        max-width: 100%; /* Allow full width */
+    }
+
+    #Back {
+        width: 100%; /* Full width on mobile */
+        flex-direction: column; /* Stack items vertically if needed */
+    }
+
+    #logos {
+        padding: 15px 0; /* Adjusted padding */
+        margin-top: 20px; /* Adjusted margin */
+    }
+
+    .logo-container {
+        gap: 20px; /* Adjusted gap */
+        animation: scroll 10s linear infinite; /* Adjusted animation duration */
+    }
+
+     @keyframes scroll {
+        0% { transform: translateX(0%); }
+        100% { transform: translateX(-100%); }
+    }
+
+
+    #logos img {
+        width: 80px; /* Smaller logo size on mobile */
+    }
+
+
+    footer {
+        padding: 15px; /* Adjusted padding */
+    }
+
+    .footer-links a.linkhai {
+        margin: 0 5px; /* Reduced spacing between footer links */
+        font-size: 0.9em; /* Smaller font size */
+    }
 }
