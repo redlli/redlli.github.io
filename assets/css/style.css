@@ -6,6 +6,11 @@ body {
     padding: 0;
     /* We will add padding-top in the media query for mobile */
     overflow-x: hidden; /* Prevent horizontal scroll when mobile menu is open */
+    
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    align-items: center; 
 }
 header {
     font-size: 24px;
@@ -76,13 +81,16 @@ nav ul li a {
     color: white;
     background-color: black;
     margin-top: 7%; /* Original margin-top */
+    margin-right: 21%;
+    margin-left: 21%;
     padding: 1%;
     box-sizing: border-box;
     width: 100%; /* Default width */
-    max-width: 1200px; /* Max width for larger screens */
-    margin-left: auto; /* Center content */
-    margin-right: auto; /* Center content */
     min-height: 80vh; /* Ensure content area is at least 80vh */
+    display: flex;
+    flex-grow: 1;
+    max-width: 900px; /* Set a maximum width for the centered content */
+    flex-direction: column; /* Stack content vertically */
 }
 
 /* Intro Section */
