@@ -1,6 +1,6 @@
 ---
 title: About
-layout: def
+layout: default
 permalink: /random
 icon: /assets/img/icons/JA_logo.png
 description: Redirecting page
